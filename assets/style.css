@@ -1,0 +1,58 @@
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+a,a:hover{
+    text-decoration: none;
+}
+.joke{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top:100%;
+    width: 350px;
+    text-align: center;
+    background-color: #fff;
+    z-index: 1;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    padding: 15px;
+    
+}
+@keyframes move{
+    to{
+        top:50%;
+        transform: translate(-50%,-50%);
+    }
+}
+.joke h2{
+    font-size: 30px;
+}
+.joke.hide{
+    top:100
+}
+.joke img{
+    height: 300px;
+    object-fit: contain;
+    position: relative;
+}
+.joke p{
+    width: 100%;
+    font-size: 22px;
+    text-shadow: 0 2px 3px currentColor;
+    color: #d22828;
+    margin-top: 10px;
+    animation: textMove 2s infinite ease;
+}
+@keyframes textMove{
+    from{
+        transform: skew(-30deg);
+        color: #d22828;
+    }
+    to{
+        transform: skew(30deg);
+        color: #689a38;
+    }
+}

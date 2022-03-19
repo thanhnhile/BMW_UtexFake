@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Roboto:wght@100;300;400;500&display=swap');
+:root{
+    --primary-color:#1a73e8;
+    --text-color:#5f636f;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Roboto', 'Noto Sans', sans-serif;
+    font-size: 62.5%;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.wrapper{
+    width: 448px;
+    height: 500px;
+    border-radius: 10px;
+    border:1px solid #ccc;
+    overflow: hidden;
+    position: relative;
+}
+.progress-bar{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #ccc;
+    position: relative;
+    visibility: hidden;
+}
+.progress{
+    width: 50%;
+    height: 100%;
+    background-color: var(--primary-color);
+    /* animation: progress 1s ease infinite ; */
+}
+#input-pass{
+    position: absolute;
+    top: 40px;
+    right: -100%;
+}
+@keyframes floatMain{
+    to{
+        transform: translateX(0);
+        right: 0;
+    }
+}
+@keyframes floatLeft{
+    to{
+        transform: translateX(-100%);
+        display: none;
+    }
+}
+@keyframes floatRight {
+    to{
+        right:-100%;
+    }
+}
+@keyframes progress {
+    to{
+        transform: translateX(200%);
+    }
+}
+.header{
+    height: 36px;
+    padding: 0 16px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+}
+.header img{
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+    margin-right: 12px;
+}
+.header h2{
+    font-size: 14px;
+    height: 14px;
+    color:var(--text-color);
+    font-weight: 400;
+    line-height: 1.4;
+}
+.content{
+    height: 100%;
+    padding: 0 24px;
+}
+.content h1{
+    color: #202124;
+    padding-bottom: 0;
+    padding-top: 16px;
+    font-family: 'Noto Sans',arial,sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.3333;
+    margin-bottom: 0;
+    margin-top: 0;
+    word-break: break-word;
+    text-align: center;
+}
+.content p{
+    color: #202124;
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 8px;
+    line-height: 1.5;
+    letter-spacing: 0.1;
+    text-align: center;
+}
+.form-group{
+    margin-top: 32px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    position: relative;
+}
+.form-group.focus{
+    border-width: 2px;
+    border-color: var(--primary-color);
+}
+.form-group.focus .label{
+    font-size: 13px;
+    color: var(--primary-color);
+    top:0;
+    transform: translateY(-50%);
+    left:6px;
+}
+.form-group .label{
+    position: absolute;
+    font-size: 13px;
+    font-weight: 400;
+    background-color: #fff;
+    padding: 0 5px;
+    color: var(--text-color);
+    top:0;
+    transform: translateY(-50%);
+    left:6px;
+    transition: 0.3s;
+
+}
+.label.blank{
+    top:50%;
+    left: 17px;
+    transform: translateY(-50%); 
+    font-size: 17px;
+}
+.form-control{
+    width: 100%;
+    padding: 15px 15px 13px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+}
+.link{
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+}
+.content a{
+    display: block;
+    padding: 9px 0 3px;
+    text-align: left;
+}
+.footer{
+    padding: 35px 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn{
+    color: #fff;
+    background-color: var(--primary-color);
+    font-size: 1.7rem;
+    font-weight: 500;
+    padding: 8px 24px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.btn:hover{
+    color: #fff;
+    filter: brightness(0.8);
+}
+.setting{
+    width: 448px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+.sumary{
+    font-size: 14px;
+    color: #000;
+    font-weight: 400;
+    position: relative;
+    cursor: pointer;
+}
+.sumary::after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 4px solid currentColor;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -15px;
+}
+.link-setting{
+    text-decoration: none;
+    font-size: 13px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+.link-setting:not(:last-child){
+    margin-right: 30px;
+}
+.email-address{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+.email-address span{
+    font-size: 14px;
+    font-weight: 500;
+}
+.fa-circle-user{
+    font-size: 16px;
+    margin-right: 10px;
+}
+.show-pass{
+    display: block;
+    font-size: 16px;
+    text-align: left;
+    padding-top: 8px;
+}
+input[type="checkbox"]{
+    transform: scale(1.5);
+    margin-right: 15px;
+    margin-left: 3px;
+}
+.spoofHeader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 5px;
+}
+.nav{
+    width: 100%;
+    background-color: #fff;
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 15px;
+}
+.left{
+    display: flex;
+    align-items: center;
+}
+.left img{
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
+    margin-right: 12px;
+}
+.left h2{
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 15px;
+    margin-bottom: 0;
+}
+.right i,
+.back i{
+    font-size: 16px;
+    margin:0 15px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.back i{
+    font-size: 20px;
+    padding: 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+    color: vả(--text-color);
+}
+/* Responsive mobile */
+@media screen and (max-width:768px){
+    .wrapper{
+        width: 80vw;
+        margin-top: 20px;
+    }
+    .spoofHeader{
+        display: none;
+    }
+    .setting{
+        width: 80vw;
+    }
+}
+@media screen and (max-width:500px) {
+    #input-pass{
+       right: -150%;
+    }
+    .btn{
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+    .link{
+        font-size: 13px;
+    }
+    .link-setting, .sumary{
+        font-size: 12px;
+    }
+}
