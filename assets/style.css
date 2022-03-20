@@ -12,13 +12,13 @@ a,a:hover{
     left: 50%;
     transform: translateX(-50%);
     top:100%;
-    width: 350px;
     text-align: center;
     background-color: #fff;
     z-index: 1;
     border: 1px solid #ccc;
     overflow: hidden;
     padding: 15px;
+    display: flex;
     
 }
 @keyframes move{
@@ -28,7 +28,7 @@ a,a:hover{
     }
 }
 .joke h2{
-    font-size: 30px;
+    font-size: 25px;
 }
 .joke.hide{
     top:100
@@ -38,21 +38,27 @@ a,a:hover{
     object-fit: contain;
     position: relative;
 }
-.joke p{
-    width: 100%;
-    font-size: 22px;
-    text-shadow: 0 2px 3px currentColor;
-    color: #d22828;
-    margin-top: 10px;
-    animation: textMove 2s infinite ease;
+.joke-right{
+    list-style-type: none;
 }
-@keyframes textMove{
-    from{
-        transform: skew(-30deg);
-        color: #d22828;
-    }
+.joke-right h2{
+    animation: textScale 1s infinite;
+}
+.joke-right li{
+    font-size: 20px;
+    color: black;
+    margin-top: 10px;
+}
+.joke-right h3{
+    font-size: 22px;
+    color: #000;
+    margin-top:60px;
+    animation: textScale 2s infinite ease 1s;
+}
+@keyframes textScale{
     to{
-        transform: skew(30deg);
-        color: #689a38;
+        transform: scale(1.2);
+        color: #d22828;
+        text-shadow: 0 2px 3px currentColor;
     }
 }
